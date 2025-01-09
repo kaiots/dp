@@ -1,19 +1,11 @@
 ```bash
-step 1
+step 5
 ```
 
-```bash
-gh extension install diplodoc-platform/gh-docs
-```
-
-```bash
-gh docs --version
-```
-
-```bash
-gh docs -i ./docs -o ./build
-```
-
-```bash
-open build/index.html 
+```yaml
+      - name: Build docs
+        uses: diplodoc-platform/docs-build-action@v3
+        with:
+          src-root: './docs'
+          build-root: './build'
 ```
